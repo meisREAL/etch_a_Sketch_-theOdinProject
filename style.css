@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainGrid {
+    width: 960px;
+    height: 960px;
+    border: 2px solid gold;
+    margin: 25px;
+    display: grid;
+}
+
+.gridRow {
+    border: 1px solid gold;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.gridCol {
+    border: 1px solid gold;
+
+}
