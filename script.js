@@ -4,7 +4,7 @@ function makeGrid() {
         const gridRow = document.createElement('div');
         gridRow.classList.add('gridRow');
         mainGrid.appendChild(gridRow);
-        for (j = 0; j <= 14; j++) {
+        for (j = 0; j <= 15; j++) {
             const gridCol = document.createElement('div');
             gridCol.classList.add('gridCol');
             gridRow.appendChild(gridCol);
@@ -12,5 +12,7 @@ function makeGrid() {
         }
     }
 }
+
+
 
 makeGrid();
