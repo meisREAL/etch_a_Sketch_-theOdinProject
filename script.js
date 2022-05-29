@@ -23,27 +23,24 @@ makeGrid(16);
 function changeColumnColor() {
     this.style.backgroundColor = 'black';
 }
-// const gridColumns = document.querySelectorAll('.gridCol');
 
-// for (i = 0; i < gridColumns.length; i++) {
-//     gridColumns[i].addEventListener('mouseover', changeColumnColor);
-// }
 
 function selectGridSize() {
     let mainGrid = document.querySelector('.mainGrid');
     while (mainGrid.firstChild) {
         mainGrid.removeChild(mainGrid.firstChild)
     }
-    let cellNumber = Number(prompt('Choose grid size up to 100 cells'));
+    var cellNumber = Number(prompt('Choose grid size up to 100 cells'));
+    while (cellNumber < 0 || cellNumber > 100) {
+        var cellNumber = Number(prompt('Choose grid size up to 100 cells'));
+    }
     return makeGrid(cellNumber); //return cellNumber
 }
 
 const selectSizeBtn = document.querySelector('#selectSize');
 selectSizeBtn.addEventListener('click', selectGridSize);
 
-// for (i = 0; i < gridColumns.length; i++) {
-//     gridColumns[i].addEventListener('mouseover', changeColumnColor);
-// }
+
 
 // reikia:
 // mygtuko paspaudimas turi istrint esama grida ir sukurt nauja
